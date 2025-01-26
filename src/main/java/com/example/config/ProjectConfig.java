@@ -1,6 +1,5 @@
 package com.example.config;
 
-import com.example.beans.Person;
 import com.example.beans.Vehicle;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,18 +13,18 @@ public class ProjectConfig {
     value to the context.
      **/
     @Bean
-    public Vehicle vehicle(){
-        Vehicle vehicle = new Vehicle();
-        vehicle.setName("Toyota");
-        return vehicle;
+    Vehicle vehicle(){
+        var veh = new Vehicle();
+        veh.setName("Audi 8");
+        return veh;
     }
-
     @Bean
-    public Person person(){
-        Person person = new Person();
-        person.setName("Toty");
-        person.setVehicle(vehicle());
-        return person;
+    String hello(){
+        return "Hello World";
+    }
+    @Bean
+    Integer number(){
+        return 16;
     }
 
 
